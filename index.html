@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Планировщик заданий</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+    <div id="wreap">
+
+        <div id="top"></div>
+
+        <section id="sec">
+            <section id="sec1">
+                <header id="main_header">
+                    <h1>Планировщик заданий</h1>
+                    <p>FOR RUBY GARAGE</p>
+                </header>
+
+                <article>
+                    <header id="article_header">
+                        <div class="art_head a_h_1"><p>📅</p></div>
+                        <div class="art_head a_h_2"><p>Новое задание</p></div>
+                        <div class="art_head a_h_3" title="Редактирование: Выкл."><p>&#9998;</p></div>
+                        <div class="art_head a_h_4"><p>&#10008;</p></div>
+                    </header>
+
+                    <div id="article_menu">
+                        <div id="a_m_1" class="art_menu"><p>+</p></div>
+                        <div id="a_m_2" class="art_menu">
+                            <table class="a_m_table">
+                                <tr>
+                                    <td>
+                                        <form action="" name="form" class="a_m_form" method="POST">
+                                            <input type="text" class="inp">
+                                            <button name="but" type="button" class="but">Добавить</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="article_cont">
+                        <div class="art_head aa_h_1"><p>&#10004;</p></div>
+                        <div class="art_head aa_h_2"><p>Новая запись 1</p></div>
+                        <div class="art_head aa_h_5">
+                            <div class="aa_h_5_top">&uArr;</div>
+                            <div class="aa_h_5_bottom">&dArr;</div>
+                        </div>
+                        <div class="art_head aa_h_3" title="Редактирование: Выкл."><p>&#9998;</p></div>
+                        <div class="art_head aa_h_4"><p>&#10008;</p></div>
+                    </div>
+
+                    <div class="article_cont">
+                        <div class="art_head aa_h_1"><p>&#10004;</p></div>
+                        <div class="art_head aa_h_2"><p>Новая запись 2</p></div>
+                        <div class="art_head aa_h_5">
+                            <div class="aa_h_5_top">&uArr;</div>
+                            <div class="aa_h_5_bottom">&dArr;</div>
+                        </div>
+                        <div class="art_head aa_h_3" title="Редактирование: Выкл."><p>&#9998;</p></div>
+                        <div class="art_head aa_h_4"><p>&#10008;</p></div>
+                    </div>
+
+                    <div class="article_cont">
+                        <div class="art_head aa_h_1"><p>&#10004;</p></div>
+                        <div class="art_head aa_h_2"><p>Новая запись 3</p></div>
+                        <div class="art_head aa_h_5">
+                            <div class="aa_h_5_top">&uArr;</div>
+                            <div class="aa_h_5_bottom">&dArr;</div>
+                        </div>
+                        <div class="art_head aa_h_3" title="Редактирование: Выкл."><p>&#9998;</p></div>
+                        <div class="art_head aa_h_4"><p>&#10008;</p></div>
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="sec2">
+                <div id="bot_but">
+                    <button id="but_add">Добавить задание</button>
+                </div>
+                <p>&copy; Ruby Garage</p>
+            </section>
+        </section>
+
+        <div id="bottom"></div>
+
+    </div>
+
+
+<script>
+$(".but").click(function() {
+    var inp = $("input").val();
+    if(inp !== '') {
+        $("article").append(`
+            <div class="article_cont">
+                <div class="art_head aa_h_1"><p>&#10004;</p></div>
+                <div class="art_head aa_h_2"><p>${inp}</p></div>
+                <div class="art_head aa_h_5">
+                    <div class="aa_h_5_top">&uArr;</div>
+                    <div class="aa_h_5_bottom">&dArr;</div>
+                </div>
+                <div class="art_head aa_h_3" title="Редактирование: Выкл."><p>&#9998;</p></div>
+                <div class="art_head aa_h_4"><p>&#10008;</p></div>
+            </div>`);
+        $("input").val("");
+    }
+});
+
+$('.a_h_3').click(function() {
+	var val = $(this).prev().attr('contenteditable');
+	if(val == 'true') {
+		$(this).prev().attr('contenteditable', 'false');
+		$(this).attr('title', 'Редактирование: Выкл -');
+	} else {
+		$(this).prev().attr('contenteditable', 'true');
+		$(this).attr('title', 'Редактирование: Вкл +');
+	}
+});
+
+$('.aa_h_3').click(function() {
+	var val = $(this).prev().prev().attr('contenteditable');
+	if(val == 'true') {
+		$(this).prev().prev().attr('contenteditable', 'false');
+		$(this).attr('title', 'Редактирование: Выкл -');
+	} else {
+		$(this).prev().prev().attr('contenteditable', 'true');
+		$(this).attr('title', 'Редактирование: Вкл +');
+	}
+});
+
+$('.a_h_4').click(function() {
+	$(this).parent().parent().remove();
+});
+
+$('.aa_h_4').click(function() {
+	$(this).parent().remove();
+});
+
+$(document).ready(function(){
+    $(".aa_h_5_top").click(function(){
+        var pdiv = $(this).parent('div').parent('div');
+        pdiv.insertBefore(pdiv.prev());
+        return false
+    });
+    $(".aa_h_5_bottom").click(function(){
+        var pdiv = $(this).parent('div').parent('div');
+        pdiv.insertAfter(pdiv.next());
+        return false
+    });
+});
+
+$('#but_add').click(function() {
+    $("#sec1").append(`
+    <article>
+                    <header id="article_header">
+                        <div class="art_head a_h_1"><p>📅</p></div>
+                        <div class="art_head a_h_2"><p>Новое задание</p></div>
+                        <div class="art_head a_h_3" title="Редактирование: Выкл."><p>&#9998;</p></div>
+                        <div class="art_head a_h_4"><p>&#10008;</p></div>
+                    </header>
+
+                    <div id="article_menu">
+                        <div id="a_m_1" class="art_menu"><p>+</p></div>
+                        <div id="a_m_2" class="art_menu">
+                            <table class="a_m_table">
+                                <tr>
+                                    <td>
+                                        <form action="" name="form" class="a_m_form" method="POST">
+                                            <input type="text" class="inp">
+                                            <button name="but" type="button" class="but">Добавить</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </article>`);
+});
+
+</script>
+
+</body>
+</html>

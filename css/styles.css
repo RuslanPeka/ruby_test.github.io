@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#wreap {
+    position: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #CDCBBE, #CDCBBE, #D29111, #D29111);
+}
+
+#top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+#bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+#sec {
+    margin: 0 auto;
+    width: 500px;
+    min-height: 100vh;
+}
+
+#main_header {
+    margin-top: 5%;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+}
+
+#main_header h1 {
+    font-size: 40px;
+}
+
+#main_header p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+article {
+    margin-top: 30px;
+    width: 500px;
+    min-height: 80px;
+    background-color: white;
+}
+
+#article_header{
+    width: 500px;
+    height: 40px;
+    background-color: #4371AD;
+}
+
+.art_head {
+    float: left;
+}
+
+.a_h_1 {
+    padding-top: 5px;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(12, 37, 68);
+}
+
+.a_h_1 p {
+    cursor: default;
+}
+
+.a_h_2 {
+    padding-top: 10px;
+    width: 410px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.a_h_3 {
+    padding-top: 5px;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.a_h_3:hover p {
+    color: gold;
+}
+
+.a_h_4 {
+    padding-top: 5px;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.a_h_4:hover p {
+    color: red;
+}
+
+#article_menu {
+    width: 500px;
+    height: 40px;
+    background: linear-gradient(180deg, #E1E1E1, #CDCDCD);
+}
+
+.art_menu {
+    float: left;
+}
+
+#a_m_1 {
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+
+#a_m_1 p {
+    cursor: default;
+}
+
+.a_m_table {
+    width: 470px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.inp {
+    margin-left: -5px;
+    width: 360px;
+    font-size: 18px;
+}
+
+.but {
+    margin-left: -5px;
+    width: 100px;
+    font-size: 18px;
+    background: linear-gradient(180deg, #8FC6A8, #52896A);
+    color: white;
+}
+
+#a_m_2 {
+    width: 410px;
+    height: 40px;
+}
+
+
+.article_cont {
+    width: 500px;
+    height: 40px;
+    background-color: whitesmoke;
+}
+
+.article_cont .aa_h_1 {
+    padding-top: 5px;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(12, 37, 68);
+}
+
+.article_cont .aa_h_1 p {
+    cursor: default;
+}
+
+.article_cont .aa_h_2 {
+    padding-top: 10px;
+    width: 380px;
+    height: 30px;
+    font-size: 15px;
+    color: black;
+}
+
+.article_cont .aa_h_3 {
+    padding-top: 5px;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.article_cont .aa_h_3:hover p {
+    color: goldenrod;
+}
+
+.article_cont .aa_h_4 {
+    padding-top: 5px;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.article_cont .aa_h_4:hover p {
+    color: red;
+}
+
+.article_cont .aa_h_5 {
+    padding-top: 5px;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.article_cont .aa_h_5:hover p {
+    color: goldenrod;
+}
+
+.article_cont .aa_h_5_top {
+    width: 30px;
+    height: 17px;
+    text-align: center;
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+}
+
+.article_cont .aa_h_5_bottom {
+    width: 30px;
+    height: 18px;
+    text-align: center;
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+}
+
+.article_cont .aa_h_5_top:hover{
+    color: goldenrod;
+}
+
+.article_cont .aa_h_5_bottom:hover{
+    color: goldenrod;
+}
+
+#sec2 {
+    text-align: center;
+    color: white;
+}
+
+#bot_but {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 40px;
+}
+
+#bot_but button {
+    width: 170px;
+    height: 40px;
+    background-color: #4371AD;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
